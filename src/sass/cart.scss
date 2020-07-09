@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+ul{
+    list-style: none;
+}
+
+.cartList {
+    width: 950px;
+    margin:0 auto;
+    font-size: 12px;
+    .cart_head{
+        height: 28px;
+        background: url(../img/cart-icon.png) no-repeat 10px 5px;
+        padding-top: 40px;
+        padding-left: 610px;
+        .cart_nav{
+            width: 281px;
+            height: 16px;
+            display: block;
+            float: left;
+            margin: 0px;
+            padding: 0px;
+            list-style-type: none;
+            overflow: hidden;
+            
+            li{
+                height: 16px;
+                float: left;
+                margin: 0px;
+                padding-top: 0px;
+                padding-right: 6px;
+                padding-bottom: 0px;
+                padding-left: 6px;
+                text-decoration: none;
+                border-right: 1px solid #CCCCCC;
+                line-height: 16px;
+                a{
+                    color: #999999;
+                    text-decoration: none;
+                }
+            }
+            .clearfix{
+                height: 1px;
+                clear: both;
+            }
+        }
+    }
+    .cartHead {
+        width: 948px;
+        text-align: center;
+        border: 1px solid #CCCCCC;
+        background: url(../img/cart-tip-bg.png) repeat-x top;
+        height: 33px;
+        text-align: center;
+        color: #333333;
+        li {
+            float: left;
+            text-align: center;
+            line-height: 33px;
+        }
+    }
+}
+
+
+// .cartcontent{
+//     border: 1px solid #CCCCCC;
+// }
+
+.goodInfo {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+    border: 1px solid #CCCCCC;
+}
+
+.goodInfo li {
+    float: left;
+    width: 200px;
+    height: 50px;
+    float: left;
+    font: 24px/50px "";
+    text-align: center;
+    border-bottom-width: 1px;
+    border-bottom-style: dashed;
+    border-bottom-color: #CCCCCC;
+}
+
+.goodInfo li input {
+    width: 30px;
+    text-align: center;
+}
+
+.goodInfo li.num a {
+    display: inline-block;
+    width: 10px;
+    height: 20px;
+    font: 12px/20px "";
+    background: #ddd;
+    text-decoration: none;
+}
+
+.goodInfo li img {
+    width: 40px;
+    height: 40px;
+    margin-top: 5px;
+    text-align: center;
+}
+
+.blank {
+    height: 50px;
+    font: 32px/50px "";
+    text-align: center;
+    border: 1px solid black;
+    border-top: none;
+    display: none;
+}

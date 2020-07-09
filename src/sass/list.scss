@@ -1,0 +1,277 @@
+@import 'public';
+
+.brand-top{
+    width:100%;
+    text-align:center;
+    overflow:hidden;
+}
+.brand-cont{
+    width:1200px;
+    margin:0 auto;
+    .hotgoods{
+        width:1172px;
+        background:#ff8888;
+        margin:15px auto;
+        border-bottom:8px solid #e5e5e5;
+        padding:30px 14px;
+        display:table;
+        dl{
+            float:left;
+            width:224px;
+            height:310px;
+        }
+        .dudl{
+            width:204px;
+            height:290px;
+            margin-right:13px;
+            background:#fff;
+            padding:20px 10px 0;
+            .adword{
+                background:#d60000;
+                width:204px;
+                height:22px;
+                line-height:22px;
+                color:#fff;
+                font-weight:bold;
+                text-align:center;
+                margin:10px 0 6px;
+            }
+            .goodname{
+                line-height:18px;
+                height:36px;
+                overflow:hidden;
+                a{
+                    color:#333;
+                }
+            }
+        }
+        .lastdl{
+            margin-right:0;
+        }
+    }
+    .brand-list{
+        width:1200px;
+        clear:both;
+        .b-l-left{
+            width:228px;
+            border:1px solid #e4e4e4;
+            float:left;
+            .brand-logo{
+                width:180px;
+                height:90px;
+                margin:10px auto;
+            }
+            .brand-story{
+                text-align:center;
+                margin-bottom:16px;
+                a{
+                    color:#333;
+                }
+            }
+            h2{
+                width:228px;
+                height:35px;
+                line-height:35px;
+                background:#ff8888;
+                color:#fff;
+                text-indent:20px;
+            }
+            ul .firstli{
+                width:228px;
+                height:34px;
+                line-height:34px;
+                border-bottom:1px solid #dcdcdc;
+                font-weight:bold;
+                .firstp{
+                    height:34px;
+                    padding-left:32px;
+                    overflow:hidden;
+                    cursor: pointer;
+                }
+            }
+            .brandseries li:hover{
+                text-decoration: underline;
+            }
+            .kindsbar .secdli{
+                line-height:30px;
+                height:30px;
+                padding-left:40px;
+                border-bottom:1px dotted #e4e4e4;
+                cursor: pointer;
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+        }
+        .b-l-right{
+            .filter{
+                margin-top: 10px;
+                margin-left: 10px;
+                width:938px;
+                height:26px;
+                background:url(../img/filbg.jpg) repeat-x;
+                border:1px solid #eee;
+                border-top:2px solid #15ade0;
+                float:left;
+                padding:5px 10px;
+                dl,dt,dd{
+                    float:left; line-height:26px;
+                }
+                dl{
+                    dd{
+                        height:24px;
+                        border:1px solid #CECBCE;
+                        background:#f6f6f6;
+                        border:1px solid #cecbce;
+                        margin-right:5px;
+                        line-height:24px;
+                        padding:0 10px;
+                        cursor: pointer; 
+                        &:hover{
+                            text-decoration: underline;
+                        }
+                    }
+                    .curr{
+                        background:#fc1c5a;
+                        border:1px solid #fc1c5a;
+                        color:#fff;
+                        font-weight:bold;
+                        position: relative;
+                        a{
+                            color:#fff;
+                        }
+                        &:hover{
+                            text-decoration: underline;
+                            color: #fff;
+                        }
+                    }
+                }
+                .page{
+                    float:right;
+                    height:26px;
+                    border-left:1px solid #e7e3e7;
+                    span,a{
+                        float:left; padding:3px 10px; border:1px solid #ccc; margin-left:2px; font-family:arial; overflow:hidden; border-radius:3px; background:#f8f8f8; height:14px; line-height:14px; color:#005aa0; margin-top:2px;
+                    }
+                    .mb{
+                        font-family:verdana;
+                        border:0;
+                        padding:4px 11px;
+                        i{
+                            font-style:normal;
+                            font-weight:bold;
+                            color:#fc1c5a;
+                        }
+                    }
+                    .disa-btn{
+                        padding-left:12px;
+                        color:#ccc;
+                        cursor:default;
+                    }
+                }
+                .total{
+                    float:right;
+                    height:22px;
+                    padding:2px 15px 2px 0;
+                    line-height:22px;
+                    color:#fc1c5a;
+                }
+            }
+        }
+        .cplist{
+            width:960px;
+            float:left;
+            margin:10px 0;
+            dl{
+                width:214px;
+                float:left;
+                background:#fff;
+                padding:13px;
+                &:hover{
+                    background:#f4f4f4;
+                }
+                dt{
+                    padding:7px;
+                    width:200px;
+                    height:200px;
+                    background:#fff;
+                }
+                .pro-name{
+                    line-height:18px;
+                    height:36px;
+                    overflow:hidden;
+                    a:hover{
+                        color:#ff1a3a;
+                        text-decoration:underline;
+                    }
+                }
+                .pro-price{
+                    color:#ff1a3a;
+                    font-size:14px;
+                    font-weight:bold;
+                    margin:10px 0 3px 0;
+                    span{
+                        font-size:16px;
+                    }
+                    .zhekou{
+                        font-size:12px;
+                        font-weight:normal;
+                    }
+                }
+                .buybtn{
+                    a{
+                        display:block;
+                        float:left;
+                        padding:0 15px;
+                        height:24px;
+                        line-height:24px;
+                        border-radius:3px;
+                        background:#fc1c5a;
+                        text-align:center;
+                    }
+                    .add{
+                        background:#fc1c5a;
+                        color:#fff;
+                    }
+                    .shouc{
+                        background:#efefef;
+                        color:#666;
+                        margin-left:10px;
+                        border:1px solid #dfdfdf;
+                        height:22px;
+                        line-height:22px;
+                    }
+                }
+            }
+        }
+        .page-below{
+            clear: both;
+            .inner{
+                float: right;
+                margin-top: 20px;
+                a{
+                    float: left;
+                    height: 20px;
+                    padding: 2px 10px;
+                    margin-left: 2px;
+                    line-height: 20px;
+                    font-size: 12px;
+                    overflow: hidden;
+                    text-decoration: none;
+                    border: 1px solid #ccc;
+                }
+                .curr{                    
+                    background: #02a3f0;
+                    color: #fff;
+                    border: 1px solid #02a3f0;
+                    font-weight: bold;
+                    cursor: default;
+                }
+            }
+        }
+    }
+}
+
+
+
+

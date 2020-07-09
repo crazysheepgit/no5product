@@ -1,0 +1,1678 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>详情页</title>
+    <link rel="stylesheet" href="../css/details.min.css">
+    <script src="../js/jquery-1.12.4.min.js"></script>
+    <script src="../js/public.min.js"></script>
+    
+    <script src="../js/product.min.js"></script>
+</head>
+<body>
+    <!-- header -->
+    <header class="head-info">
+        <div class="infobox">
+            <ul class="head-welcome">
+                <li>上午好，欢迎光临No5时尚广场。<span>[<a href="login.html">登录</a>] [<a href="login.html">免费注册</a>]</span></li>
+            </ul>
+            <ul class="user-control">
+                <li class="hide"><a href="#">我的账户</a><b></b>
+                    <div class="myaccount">
+                        <p><a href="#">我的订单</a></p>
+                        <p><a href="#">我的积分</a></p>
+                        <p><a href="#">我的优惠券</a></p>
+                        <p><a href="#">我的收藏</a></p>
+                    </div>
+                </li>
+                <li class="line">|</li>
+                <li><a href="#">收藏本站</a></li>
+                <li class="line">|</li>
+                <li><a href="#">帮助中心</a></li>
+                <li class="tel"><span></span><i>010-56422901</i></li>
+            </ul>  
+            <div class="clear"></div>  
+        </div>	
+    </header>
+    <div class="headbox">
+        <div class="logo"><a href="#"><img src="../img/logo.jpg"></a></div>	
+        <div class="searchbox">
+            <div class="search">
+                <strong id="search-btn">搜索</strong>
+                <div class="del-keywords" onclick="clearinput()">×</div>
+                <input type="text" id="search" name="search" value="口红" onfocus="clearinput()" onblur="addinput()">
+            </div>
+            <div class="hot-key">热门搜索：
+                <a href="#">保湿</a>
+                <a href="#" class="LETTER-RED">防敏感专用</a>
+                <a href="#">雅诗兰黛</a>
+                <a href="#">气垫bb</a>
+                <a href="#" class="LETTER-RED">护手霜</a>
+                <a href="#">专柜小样</a>
+                <a href="#">口红</a>
+            </div>
+            <div id="qrcode-box">
+                <img src="../img/qrcode-app-80.png" id="appdown">
+                <ul id="mobile-menu">
+                    <li class="app">
+                        <img src="../img/qrcode-app-80.png">
+                        <strong>app下载</strong>
+                        <p>
+                            <a href="#" class="android" target="_blank"></a>
+                            <a href="#" class="ios" target="_blank"></a>
+                        </p>
+                    </li>
+                    <li class="gzh">
+                        <img src="../img/qrcode-gzh-80.jpg">
+                        <strong>关注微信公众号</strong>
+                    </li>
+                    <li></li>
+                </ul>
+            </div>
+        </div>
+        <div id="page-cartbar" class="shoppingcart">
+            <div class="trigger" style="cursor: pointer;">购物车<strong>0</strong>件</div>
+        </div>
+    </div>
+
+    <!-- nav -->
+    <div id="main-nav" class="mainnav">
+        <div class="navbox">
+            <div class="subnav">
+                <ul>
+                    <li style="background:none;"><a href="#">首页</a></li>
+                    <li><a href="#">超值小样</a></li>
+                    <li><a href="#">明星推荐</a></li>
+                    <li><a href="#">最新活动</a></li>                
+                    <li><a href="#">新品上架</a></li>
+                    <li><a href="#" class="LETTER-RED">本周特价</a></li>               
+                    <li><a href="#" class="LETTER-RED">清仓</a></li>               
+                    <li><a href="#">品牌库</a></li>
+                </ul>
+            </div>
+            <div class="float-list" id="float-list">
+                <span class="float-list-btn">全部商品分类</span>
+                <dl id="webf0">
+                    <dt>
+                        <strong><a href="#">面部护理</a></strong>
+                        <p>
+                            <a href="#">洗面奶</a>
+                            <a href="#">爽肤水</a>
+                            <a href="#">乳液</a>
+                            <a href="#">防晒</a>
+                            <a href="#">面膜</a>
+                            <a href="#" class="LETTER-RED">精华</a>
+                            <a href="#">眼霜</a>
+                            <a href="#">卸妆</a>
+                            <a href="#">T区护理</a>
+                        </p>
+                        <b class="arrow-right"></b>
+                    </dt>
+                    <dd>
+                        <ul class="secondlist">
+                            <li>
+                                <strong><a href="#">卸妆步骤</a></strong>
+                                <div class="float-list-cont">
+                                    <a href="#">卸妆油</a>
+                                    <a href="#">卸妆乳/霜</a>
+                                    <a href="#">眼唇卸妆</a>
+                                    <a href="#">卸妆水</a>
+                                    <a href="#">卸妆啫喱</a>
+                                    <a href="#">洁肤卸妆2合1</a>
+                                </div>
+                            </li>
+                            <li>
+                                <strong><a href="#">洁肤步骤</a></strong>
+                                <div class="float-list-cont">
+                                    <a href="#">洁面乳/膏</a>
+                                    <a href="#">洁面啫喱</a>
+                                    <a href="#">洁面慕斯</a>
+                                    <a href="#">洁面皂</a>
+                                    <a href="#">洁面粉</a>
+                                    <a href="#">面部去角质</a>
+                                </div>
+                            </li>
+                            <li>
+                                <strong><a href="#"></a>爽肤步骤</strong>
+                                <div class="float-list-cont">
+                                    <a href="#"></a>化妆水
+                                    <a href="#"></a>美容液
+                                    <a href="#"></a>花水/纯露
+                                    <a href="#"></a>喷雾
+                                    <a href="#"></a>化妆棉
+                                </div>
+                            </li>
+                            <li>
+                                <strong><a href="#">精华步骤</a></strong>
+                                <div class="float-list-cont">
+                                    <a href="#">基底</a>
+                                    <a href="#">精华素</a>
+                                    <a href="#">原液</a>
+                                    <a href="#">精油</a>
+                                </div>
+                            </li>
+                            <li>
+                                <strong><a href="#">润肤步骤</a></strong>
+                                <div class="float-list-cont">
+                                    <a href="#">日间</a>
+                                    <a href="#">夜间</a>
+                                    <a href="#">乳液</a>
+                                    <a href="#">面霜</a>
+                                    <a href="#">凝霜</a>
+                                </div>
+                            </li>
+                            <li>
+                                <strong><a href="#">日间防护</a></strong>
+                                <div class="float-list-cont">
+                                    <a href="#">防晒乳/霜</a>
+                                    <a href="#">防晒液</a>
+                                    <a href="#">防晒喷雾</a>
+                                    <a href="#">晒后修护</a>
+                                    <a href="#">免晒美黑</a>
+                                </div>
+                            </li>
+                            <li>
+                                <strong><a href="#">眼唇护理</a></strong>
+                                <div class="float-list-cont">
+                                    <a href="#">眼精华</a>
+                                    <a href="#">眼霜</a>
+                                    <a href="#">眼膜</a>
+                                    <a href="#">唇膏/霜</a>
+                                    <a href="#">唇部去角质</a>
+                                </div>
+                            </li>
+                            <li>
+                                <strong><a href="#">特殊护理</a></strong>
+                                <div class="float-list-cont">
+                                    <a href="#">面贴膜</a>
+                                    <a href="#">水洗面膜</a>
+                                    <a href="#">免洗面膜</a>
+                                    <a href="#">撕拉面膜</a>
+                                    <a href="#">面膜粉</a>
+                                    <a href="#">按摩膏</a>
+                                </div>
+                            </li>
+                            <li>
+                                <strong><a href="#">T区护理</a></strong>
+                                <div class="float-list-cont">
+                                    <a href="#">去黑头</a>
+                                    <a href="#">鼻膜/贴</a>
+                                    <a href="#">吸油纸</a>
+                                </div>
+                            </li>
+                            <li>
+                                <strong><a href="#">口服美容</a></strong>
+                                <div class="float-list-cont">
+                                    <a href="#">胶原蛋白</a>
+                                    <a href="#">葡萄籽</a>
+                                    <a href="#">维生素</a>
+                                    <a href="#">其他</a>
+                                </div>
+                            </li>
+                            <li>
+                                <strong><a href="#">护肤套装</a></strong>
+                                <div class="float-list-cont">
+                                    <a href="#">旅行套装</a>
+                                    <a href="#">礼品套装</a>
+                                </div>
+                            </li>
+                            <li>
+                                <strong><a href="#">儿童护肤</a></strong>
+                                <div class="float-list-cont">
+                                <a href="#">护肤</a>
+                                <a href="#">防晒</a>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="hotbrand">
+                            <h4>推荐品牌</h4>
+                            <ul>
+                                <li><a href="#">兰蔻</a></li>
+                                <li><a href="#" class="LETTER-RED">雅诗兰黛</a></li>
+                                <li><a href="#">倩碧</a></li>
+                                <li><a href="#">娇韵诗</a></li>
+                                <li><a href="#">迪奥</a></li>
+                                <li><a href="#">碧欧泉</a></li>
+                                <li><a href="#">兰芝</a></li>
+                                <li><a href="#">科颜氏</a></li>
+                                <li><a href="#" class="LETTER-RED">fresh</a></li>
+                                <li><a href="#">SK-Ⅱ</a></li>
+                                <li><a href="#">可莱丝</a></li>
+                                <li><a href="#">茱莉蔻</a></li>
+                                <li><a href="#">资生堂</a></li>
+                                <li><a href="#">高丝</a></li>
+                                <li><a href="#">苏秘</a></li>
+                                <li><a href="#" class="LETTER-RED">欧惠</a></li>
+                                <li><a href="#">雪花秀</a></li>
+                                <li><a href="#">海蓝之谜</a></li>
+                                <li><a href="#">希思黎</a></li>
+                                <li><a href="#">whoo后</a></li>
+                                <li><a href="#">雅漾</a></li>
+                                <li><a href="#">芙丽芳丝</a></li>
+                                <li><a href="#">fancl</a></li>
+                                <li><a href="#">肌肤之钥</a></li>
+                                <li><a href="#">菲洛嘉</a></li>
+                                <li><a href="#">伊索</a></li>
+                                <li><a href="#">欧珀莱</a></li>
+                                <li><a href="#">黛珂</a></li>
+                                <li><a href="#">玫琳凯</a></li>
+                                <li><a href="#">玉兰油</a></li>
+                                <li><a href="#">A.H.C</a></li>
+                                <li><a href="#">更多...</a></li>
+                            </ul>
+                            <a href="#"><img src="../img/navqb.jpg" title="倩碧匀净淡斑系列" alt="倩碧匀净淡斑系列" width="200" height="187"></a>
+                        </div>
+                    </dd>
+                </dl>
+                <dl id="webf1">
+                    <dt>
+                        <strong><a href="#">彩妆</a></strong>
+                        <p>
+                            <a href="#">BB霜</a>
+                            <a href="#">粉底液</a>
+                            <a href="#">妆前乳</a>
+                            <a href="#">隔离</a>
+                            <a href="#" class="LETTER-RED">唇膏</a>
+                            <a href="#">睫毛膏</a>
+                            <a href="#">眼线</a>
+                            <a href="#">指甲油</a>
+                        </p>
+                        <b class="arrow-right"></b>
+                    </dt>
+                    <dd>
+                        <ul class="secondlist">
+                            <li>
+                                <strong><a href="#">底妆</a></strong>
+                                <div class="float-list-cont">
+                                    <a href="#">妆前乳</a>
+                                    <a href="#">隔离霜</a>
+                                    <a href="#">BB霜</a>
+                                    <a href="#">粉底液</a>
+                                    <a href="#">粉底霜/膏</a>
+                                    <a href="#">遮瑕膏</a>
+                                    <a href="#">轮廓修饰</a>
+                                    <a href="#">粉饼</a>
+                                    <a href="#">蜜粉/散粉</a>
+                                </div>
+                            </li>
+                            <li>
+                                <strong><a href="#">眉毛</a></strong>
+                                <div class="float-list-cont">
+                                    <a href="#">眉笔</a>
+                                    <a href="#">眉粉</a>
+                                    <a href="#">眉膏</a>
+                                    <a href="#">滋养/定型</a>
+                                </div>
+                            </li>
+                            <li>
+                                <strong><a href="#">眼线</a></strong>
+                                <div class="float-list-cont">
+                                    <a href="#">眼线笔</a>
+                                    <a href="#">眼线液</a>
+                                    <a href="#">眼线膏</a>
+                                </div>
+                            </li>
+                            <li>
+                                <strong><a href="#">眼影</a></strong>
+                                <div class="float-list-cont">
+                                    <a href="#">单色眼影</a>
+                                    <a href="#">多色眼影</a>
+                                    <a href="#">眼彩笔</a>
+                                    <a href="#">眼影棒</a>
+                                    <a href="#">眼影膏</a>
+                                    <a href="#">眼影粉</a>
+                                </div>
+                            </li>
+                            <li>
+                                <strong><a href="#">睫毛</a></strong>
+                                <div class="float-list-cont">
+                                    <a href="#">睫毛膏</a>
+                                    <a href="#">防水睫毛膏</a>
+                                    <a href="#">底膏/雨衣</a>
+                                    <a href="#">修护液</a>
+                                    <a href="#">假睫毛</a>
+                                    <a href="#">睫毛夹</a>
+                                </div>
+                            </li>
+                            <li>
+                                <strong><a href="#">颊妆</a></strong>
+                                <div class="float-list-cont">
+                                    <a href="#">胭脂粉</a>
+                                    <a href="#">腮红膏</a>
+                                    <a href="#">液体腮红</a>
+                                </div>
+                            </li>
+                            <li>
+                                <strong><a href="#">唇妆</a></strong>
+                                <div class="float-list-cont">
+                                    <a href="#">唇蜜</a>
+                                    <a href="#">唇彩</a>
+                                    <a href="#">唇膏</a>
+                                    <a href="#">唇线笔</a>
+                                    <a href="#">唇彩盘</a>
+                                </div>
+                            </li>
+                            <li>
+                                <strong><a href="#">甲妆</a></strong>
+                                <div class="float-list-cont">
+                                    <a href="#">洗甲水</a>
+                                    <a href="#">底油/亮油</a>
+                                    <a href="#">指甲油</a>
+                                    <a href="#">美甲套装</a>
+                                </div>
+                            </li>
+                            <li>
+                                <strong><a href="#">彩妆组合</a></strong>
+                                <div class="float-list-cont">
+                                    <a href="#">彩妆盘/盒</a>
+                                    <a href="#">彩妆套装</a>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="hotbrand">
+                            <h4>推荐品牌</h4>
+                            <ul>
+                                <li><a href="#">阿玛尼</a></li>
+                                <li><a href="#" class="LETTER-RED">YSL</a></li>
+                                <li><a href="#">娇兰</a></li>
+                                <li><a href="#" class="LETTER-RED">香奈儿</a></li>
+                                <li><a href="#">Dior</a></li>
+                                <li><a href="#">蜜丝佛陀</a></li>
+                                <li><a href="#">Benefit</a></li>
+                                <li><a href="#">安娜苏</a></li>
+                                <li><a href="#">MAC</a></li>
+                                <li><a href="#">倩碧</a></li>
+                                <li><a href="#">雅诗兰黛</a></li>
+                                <li><a href="#">skin79</a></li>
+                                <li><a href="#">VDL</a></li>
+                                <li><a href="#">玫琳凯</a></li>
+                                <li><a href="#">纪梵希</a></li>
+                                <li><a href="#">更多...</a></li>
+                            </ul>
+                            <a href="#"><img src="../img/navmsft.jpg" title="蜜丝佛陀" alt="蜜丝佛陀" width="200" height="187"></a>
+                        </div>
+                    </dd>
+                </dl>
+                <dl id="webf2">
+                    <dt>
+                        <strong><a href="#">香氛</a></strong>
+                        <p>
+                            <a href="#">女士香水</a>
+                            <a href="#">男士香水</a>
+                            <a href="#" class="LETTER-RED">香水套装</a>
+                            <a href="#">中性香水</a>
+                            <a href="#">限量版</a>
+                        </p>
+                        <b class="arrow-right"></b>
+                    </dt>
+                    <dd>
+                        <ul class="secondlist">
+                            <li>
+                                <strong><a href="#">女士香氛</a></strong>
+                                <div class="float-list-cont">
+                                    <a href="#">香氛(EDP)</a>
+                                    <a href="#">淡香水(EDT)</a>
+                                    <a href="#">香膏</a>
+                                </div>
+                            </li>
+                            <li>
+                                <strong><a href="#">男士香氛</a></strong>
+                                <div class="float-list-cont">
+                                    <a href="#">香氛(EDP)</a>
+                                    <a href="#">淡香水(EDT)</a>
+                                    <a href="#">香膏</a>
+                                </div>
+                            </li>
+                            <li>
+                                <strong><a href="#">中性香水</a></strong>
+                                <div class="float-list-cont">                            </div>
+                            </li>
+                            <li>
+                                <strong><a href="#">限量版</a></strong>
+                                <div class="float-list-cont">
+                                    <a href="#">女士限量</a>
+                                    <a href="#">男士限量</a>
+                                    <a href="#">中性限量</a>
+                                    <a href="#">夏日限量</a>
+                                </div>
+                            </li>
+                            <li>
+                                <strong><a href="#">香氛套装</a></strong>
+                                <div class="float-list-cont">
+                                    <a href="#">女士套装</a>
+                                    <a href="#">男士套装</a>
+                                    <a href="#">迷你套装</a>
+                                    <a href="#">情侣套装</a>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="hotbrand">
+                            <h4>推荐品牌</h4>
+                            <ul>
+                                <li><a href="#">香奈儿</a></li>
+                                <li><a href="#">迪奥</a></li>
+                                <li><a href="#">菲拉格慕</a></li>
+                                <li><a href="#">Hugo Boss</a></li>
+                                <li><a href="#">安娜苏</a></li>
+                                <li><a href="#">Burberry</a></li>
+                                <li><a href="#">BVLGARI</a></li>
+                                <li><a href="#">C K</a></li>
+                                <li><a href="#">大卫杜夫</a></li>
+                                <li><a href="#">雅顿</a></li>
+                                <li><a href="#">GUCCI</a></li>
+                                <li><a href="#">Kenzo</a></li>
+                                <li><a href="#">范思哲</a></li>
+                                <li><a href="#">LANVIN</a></li>
+                                <li><a href="#">兰蔻</a></li>
+                                <li><a href="#">更多...</a></li>
+                            </ul>
+                            <a href="#"><img src="../img/navck.jpg" title="ck香水" alt="ck香水" width="200" height="187"></a>
+                        </div>
+                    </dd>
+                </dl>
+                <dl id="webf3">
+                    <dt>
+                        <strong><a href="#">身体护理</a></strong>
+                        <p>
+                            <a href="#">香皂</a>
+                            <a href="#">沐浴露</a>
+                            <a href="#" class="LETTER-RED">身体乳</a>
+                            <a href="#">瘦身霜</a>
+                            <a href="#">脱毛膏</a>
+                            <a href="#">美胸霜</a>
+                            <a href="#">颈霜</a>
+                            <a href="#" class="LETTER-RED">护手霜</a>
+                        </p>
+                        <b class="arrow-right"></b>
+                    </dt>
+                    <dd>
+                        <ul class="secondlist">
+                            <li>
+                                <strong><a href="#">颈部护理</a></strong>
+                                <div class="float-list-cont">
+                                    <a href="#">颈霜</a>
+                                    <a href="#">颈膜</a>
+                                </div>
+                            </li>
+                            <li>
+                                <strong><a href="#">手足护理</a></strong>
+                                <div class="float-list-cont">
+                                    <a href="#">手霜/手膜</a>
+                                    <a href="#">足霜/足膜</a>
+                                    <a href="#">足浴</a>
+                                    <a href="#">手足去角质</a>
+                                    <a href="#">护甲</a>
+                                    <a href="#">美甲工具</a>
+                                </div>
+                            </li>
+                            <li>
+                                <strong><a href="#">洁肤沐浴</a></strong>
+                                <div class="float-list-cont">
+                                    <a href="#">沐浴露</a>
+                                    <a href="#">沐浴皂</a>
+                                    <a href="#">沐浴泡泡</a>
+                                    <a href="#">浴盐</a>
+                                    <a href="#">身体去角质</a>
+                                </div>
+                            </li>
+                            <li>
+                                <strong><a href="#">香体润体</a></strong>
+                                <div class="float-list-cont">
+                                    <a href="#">润体乳</a>
+                                    <a href="#">润体霜</a>
+                                    <a href="#">身体油</a>
+                                    <a href="#">香体乳/膏</a>
+                                </div>
+                            </li>
+                            <li>
+                                <strong><a href="#">丰胸美乳</a></strong>
+                                <div class="float-list-cont">
+                                    <a href="#">外用美胸</a>
+                                    <a href="#">口服美胸</a>
+                                    <a href="#">丰胸组合</a>
+                                </div>
+                            </li>
+                            <li>
+                                <strong><a href="#">纤体瘦身</a></strong>
+                                <div class="float-list-cont">
+                                    <a href="#">减肥食品</a>
+                                    <a href="#">外用瘦身</a>
+                                    <a href="#">美臀美腿</a>
+                                    <a href="#">妊娠纹</a>
+                                </div>
+                            </li>
+                            <li>
+                                <strong><a href="#">止汗/脱毛</a></strong>
+                                <div class="float-list-cont">
+                                    <a href="#">止汗</a>
+                                    <a href="#">脱毛膏</a>
+                                    <a href="#">脱毛蜡</a>
+                                    <a href="#">脱毛修护</a>
+                                </div>
+                            </li>
+                            <li>
+                                <strong><a href="#">洗护套装</a></strong>
+                                <div class="float-list-cont">                            </div>
+                            </li>
+                            <li>
+                                <strong><a href="#">儿童洗护</a></strong>
+                                <div class="float-list-cont">                            </div>
+                            </li>
+                        </ul>
+                        <div class="hotbrand">
+                            <h4>推荐品牌</h4>
+                            <ul>
+                                <li><a href="#">欧舒丹</a></li>
+                                <li><a href="#">娇韵诗</a></li>
+                                <li><a href="#">茱莉蔻</a></li>
+                                <li><a href="#">妲莉娅</a></li>
+                                <li><a href="#">科颜氏</a></li>
+                                <li><a href="#">萃植美</a></li>
+                                <li><a href="#">多芬</a></li>
+                                <li><a href="#">水宝宝</a></li>
+                                <li><a href="#">欧苔诗</a></li>
+                                <li><a href="#">玛贝拉</a></li>
+                                <li><a href="#">圣荷</a></li>
+                                <li><a href="#">维多利亚的秘密</a></li>
+                                <li><a href="#">海绵宝宝</a></li>
+                                <li><a href="#">更多...</a></li>
+                            </ul>
+                            <a href="#"><img src="../img/navjys.jpg" title="娇韵诗美体" alt="娇韵诗美体" width="200" height="187"></a>
+                        </div>
+                    </dd>
+                </dl>
+                <dl id="webf4">
+                    <dt>
+                        <strong><a href="#">头发护理</a></strong>
+                        <p>
+                            <a href="#">洗发水</a>
+                            <a href="#">护发素</a>
+                            <a href="#" class="LETTER-RED">发膜</a>
+                            <a href="#">修护精华</a>
+                            <a href="#">防脱发</a>
+                            <a href="#">染发</a>
+                            <a href="#">套装</a>
+                        </p>
+                        <b class="arrow-right"></b>
+                    </dt>
+                    <dd>
+                        <ul class="secondlist">
+                            <li>
+                                <strong><a href="#">日常护理</a></strong>
+                                <div class="float-list-cont">
+                                    <a href="#">洗发水</a>
+                                    <a href="#">护发乳</a>
+                                    <a href="#">免洗护发</a>
+                                    <a href="#">套装</a>
+                                </div>
+                            </li>
+                            <li>
+                                <strong><a href="#">特殊护理</a></strong>
+                                <div class="float-list-cont">
+                                    <a href="#">发膜</a>
+                                    <a href="#">精华</a>
+                                </div>
+                            </li>
+                            <li>
+                                <strong><a href="#">防脱育发</a></strong>
+                                <div class="float-list-cont">
+                                    <a href="#">头皮养护</a>
+                                    <a href="#">防脱洗发</a>
+                                    <a href="#">防脱护发</a>
+                                </div>
+                            </li>
+                            <li>
+                                <strong><a href="#">染发</a></strong>
+                                <div class="float-list-cont">
+                                    <a href="#">染发剂</a>
+                                    <a href="#">染后洗发</a>
+                                    <a href="#">染后护发</a>
+                                </div>
+                            </li>
+                            <li>
+                                <strong><a href="#">造型</a></strong>
+                                <div class="float-list-cont">
+                                    <a href="#">弹力素</a>
+                                    <a href="#">柔顺</a>
+                                    <a href="#">蓬松</a>
+                                    <a href="#">定型</a>
+                                    <a href="#">发卷发梳</a>
+                                    <a href="#">电吹风</a>
+                                </div>
+                            </li>
+                            <li>
+                                <strong><a href="#">儿童发用</a></strong>
+                                <div class="float-list-cont">                            </div>
+                            </li>
+                        </ul>
+                        <div class="hotbrand">
+                            <h4>推荐品牌</h4>
+                            <ul>
+                                <li><a href="#">卡诗</a></li>
+                                <li><a href="#">欧舒丹</a></li>
+                                <li><a href="#">欧莱雅</a></li>
+                                <li><a href="#">宜乐歌</a></li>
+                                <li><a href="#">发朵</a></li>
+                                <li><a href="#">茱莉蔻</a></li>
+                                <li><a href="#">资生堂</a></li>
+                                <li><a href="#">科颜氏</a></li>
+                                <li><a href="#">花王</a></li>
+                                <li><a href="#">美源发采</a></li>
+                                <li><a href="#">海绵宝宝</a></li>
+                                <li><a href="#">更多...</a></li>
+                            </ul>
+                            <a href="#"><img src="../img/navks.jpg" title="卡诗" alt="卡诗" width="200" height="187"></a>
+                        </div>
+                    </dd>
+                </dl>
+                <dl id="webf5">
+                    <dt>
+                        <strong><a href="#">男士专区</a></strong>
+                        <p>
+                            <a href="#" class="LETTER-RED">面部护肤</a>
+                            <a href="#">男士防晒</a>
+                            <a href="#">剃须护理</a>
+                            <a href="#">洗发护发</a>
+                            <a href="#">沐浴止汗</a>
+                            <a href="#">男士精品</a>
+                        </p>
+                        <b class="arrow-right"></b>
+                    </dt>
+                    <dd>
+                        <ul class="secondlist">
+                            <li>
+                                <strong><a href="#">面部护肤</a></strong>
+                                <div class="float-list-cont">
+                                    <a href="#">洁面</a>
+                                    <a href="#">爽肤</a>
+                                    <a href="#">精华</a>
+                                    <a href="#">润肤</a>
+                                    <a href="#">眼部</a>
+                                    <a href="#">面膜</a>
+                                    <a href="#">防晒</a>
+                                    <a href="#">去角质</a>
+                                    <a href="#">唇部</a>
+                                    <a href="#">套装</a>
+                                </div>
+                            </li>
+                            <li>
+                                <strong><a href="#">剃须护理</a></strong>
+                                <div class="float-list-cont">
+                                    <a href="#">剃须泡沫</a>
+                                    <a href="#">须后护理</a>
+                                    <a href="#">剃须刀</a>
+                                </div>
+                            </li>
+                            <li>
+                                <strong><a href="#">身体护理</a></strong>
+                                <div class="float-list-cont">
+                                    <a href="#">沐浴</a>
+                                    <a href="#">润体</a>
+                                    <a href="#">止汗</a>
+                                </div>
+                            </li>
+                            <li>
+                                <strong><a href="#">头发护理</a></strong>
+                                <div class="float-list-cont">
+                                    <a href="#">洗发护发</a>
+                                    <a href="#">防脱育发</a>
+                                    <a href="#">黑发染发</a>
+                                </div>
+                            </li>
+                            <li>
+                                <strong><a href="#">男士精品</a></strong>
+                                <div class="float-list-cont">
+                                    <a href="#">打火机</a>
+                                    <a href="#">军刀</a>
+                                    <a href="#">皮具</a>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="hotbrand">
+                            <h4>推荐品牌</h4>
+                            <ul>
+                                <li><a href="#">碧欧泉</a></li>
+                                <li><a href="#">倩碧</a></li>
+                                <li><a href="#">资生堂</a></li>
+                                <li><a href="#">欧莱雅</a></li>
+                                <li><a href="#">娇韵诗</a></li>
+                                <li><a href="#">迪奥</a></li>
+                                <li><a href="#">欧珀莱</a></li>
+                                <li><a href="#">兰蔻</a></li>
+                                <li><a href="#">兰芝</a></li>
+                                <li><a href="#">SK-Ⅱ</a></li>
+                                <li><a href="#">相宜本草</a></li>
+                                <li><a href="#">Zippo打火机</a></li>
+                                <li><a href="#">VICTORINOX军刀</a></li>
+                                <li><a href="#">更多...</a></li>
+                            </ul>
+                            <a href="#"><img src="../img/navboq.jpg" title="碧欧泉男士净肤系列" alt="碧欧泉男士净肤系列" width="200" height="187"></a>
+                        </div>
+                    </dd>
+                </dl>
+                <dl id="webf6">
+                    <dt>
+                        <strong><a href="#">美容工具</a></strong>
+                        <p>
+                            <a href="#">化妆包</a>
+                            <a href="#">购物袋</a>
+                            <a href="#">化妆刷</a>
+                            <a href="#">彩妆工具</a>
+                            <a href="#">护肤工具</a>
+                            <a href="#">美体工具</a>
+                            <a href="#">美发工具</a>
+                        </p>
+                        <b class="arrow-right"></b>
+                    </dt>
+                    <dd>
+                        <ul class="secondlist">
+                            <li>
+                                <strong><a href="#">护肤工具</a></strong>
+                                <div class="float-list-cont">
+                                    <a href="#">洁面工具</a>
+                                    <a href="#">化妆棉</a>
+                                    <a href="#">面膜纸</a>
+                                    <a href="#">吸油纸</a>
+                                    <a href="#">痘痘贴</a>
+                                </div>
+                            </li>
+                            <li>
+                                <strong><a href="#">彩妆工具</a></strong>
+                                <div class="float-list-cont">
+                                    <a href="#">粉盒</a>
+                                    <a href="#">化妆刷/粉扑</a>
+                                    <a href="#">睫毛夹/眉刀</a>
+                                    <a href="#">假睫毛</a>
+                                    <a href="#">双眼皮</a>
+                                    <a href="#">化妆镜</a>
+                                </div>
+                            </li>
+                            <li>
+                                <strong><a href="#">美体工具</a></strong>
+                                <div class="float-list-cont">
+                                    <a href="#">美甲工具</a>
+                                    <a href="#">去角质</a>
+                                    <a href="#">按摩器</a>
+                                    <a href="#">去毛刮毛</a>
+                                </div>
+                            </li>
+                            <li>
+                                <strong><a href="#">美发工具</a></strong>
+                                <div class="float-list-cont">
+                                    <a href="#">电吹风</a>
+                                    <a href="#">发卷发梳</a>
+                                </div>
+                            </li>
+                            <li>
+                                <strong><a href="#">家居用品</a></strong>
+                                <div class="float-list-cont">
+                                    <a href="#">购物袋/包</a>
+                                    <a href="#">化妆盒/包</a>
+                                    <a href="#">家居服</a>
+                                    <a href="#">其他家居</a>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="hotbrand">
+                            <h4>推荐品牌</h4>
+                            <ul>
+                                <li><a href="#">艾黛尔</a></li>
+                                <li><a href="#">贝印</a></li>
+                                <li><a href="#">丽丽贝尔</a></li>
+                                <li><a href="#">雪玛丽</a></li>
+                                <li><a href="#">玫琳凯</a></li>
+                                <li><a href="#">迪奥</a></li>
+                                <li><a href="#">资生堂</a></li>
+                                <li><a href="#">植村秀</a></li>
+                                <li><a href="#">STONE</a></li>
+                                <li><a href="#">更多...</a></li>
+                            </ul>
+                            <a href="#"><img src="../img/navsd.jpg" title="司顿美甲工具" alt="司顿美甲工具" width="200" height="187"></a>
+                        </div>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+
+    <!-- content -->
+    <div class="content">
+        <p class="current">
+            <a href="#" id="cur">首页</a>
+            <span class="prodNavTxt">&gt;</span>
+            <a href="#">面部护理</a>
+            <span class="prodNavTxt">&gt;</span>
+            <a href="#">Estee Lauder 雅诗兰黛</a>
+            <span class="prodNavTxt">&gt;</span>
+            <span class="cpname">Estee Lauder 雅诗兰黛 弹力多肽眼霜(原弹性紧实柔肤眼霜368668) 本周特价！ 15ml</span>
+        </p>
+        <div class="part01">
+            <div class="p01_l">
+                <!-- <ul id="picIdxBox">
+                    <li id="sBox0" class="pic_li pic_on">
+                        <img src="../img/sbox0.jpg" />&nbsp;
+                    </li>
+                    <li id="sBox1" class="pic_li">
+                        <img src="../img/sbox1.jpg" />
+                    </li>
+                    <li id="sBox2" class="pic_li">
+                        <img src="../img/sbox2.jpg" />
+                    </li>
+                    <li id="sBox3" class="pic_li">
+                        <img src="../img/sbox3.jpg" />
+                    </li>
+                    <li id="sBox4" class="pic_li">
+                        <img src="../img/sbox4.jpg" />
+                    </li>
+                </ul> -->
+
+                <!-- <div id="pic_box">
+                    <span class="mark"></span>
+                    <div id="magnifier" style="width: 100px; height: 100px;"></div>
+                    <img src="../img/bbox0.jpg" width="350" height="350" />
+                    <img src="../img/bbox1.jpg" width="350" height="350" />
+                    <img src="../img/bbox2.jpg" width="350" height="350" />
+                    <img src="../img/bbox3.jpg" width="350" height="350" />
+                    <img src="../img/bbox4.jpg" width="350" height="350" />
+                </div>
+                <div class="disBox">
+                    
+                    <img src="../img/bigpic.jpg" width="500" height="500"/>
+                </div> -->
+
+
+                <div class="box">
+                    <a href="javascript:;" class="phone-display" style="z-index: 10;">
+                    </a>
+                    <div class="bottom-nav clearfix">
+            
+                        <div class="tab-btn btn-left">
+                            <i class="shift-icon">
+                                <span></span>
+                            </i>
+                        </div>
+            
+                        <div class="tab-btn btn-right">
+                            <i class="shift-icon">
+                                <span></span>
+                            </i>
+                        </div>
+            
+                        <div class="bottom-center-nav">
+            
+                            <ul class="small-img-ul">
+                            </ul>
+            
+                        </div>
+            
+                    </div>
+            
+                </div>
+
+
+
+
+                <!-- <p class="datu">
+                    <img src="../img/ckdt.jpg" width="15" height="15" />
+                    <a href="#" target="_blank">点击看大图</a>
+                </p> -->
+                <div class="spell" style="margin-top: 150px; margin-left: 20px;">
+                    <span class="shareTxt">分享到：</span>
+                    <a href="#" id="site-sina" title="推荐到新浪微博">sina</a>
+                    <a href="#" id="site-qzone" title="推荐到腾讯微博">qzone</a>
+                    <a href="#" id="site-renren" title="推荐到人人">renren</a>
+                    <a href="#" id="site-kaixing" title="推荐到开心网">kaixing</a>
+                    <a href="#" id="site-douban" title="推荐到豆瓣">douban</a>
+                    <a href="#" id="site-qz" title="分享到QQ空间">msn</a>
+                </div>
+            </div>
+            <div class="p01_r">
+                <h2>Estee Lauder 雅诗兰黛 弹力多肽眼霜(原弹性紧实柔肤眼霜368668) 本周特价！ 15ml<span class="subTit">明星级胶原紧致眼霜，特别针对松弛、细纹、眼袋。</span></h2>
+                <div class="cppro">
+                    <div class="pro_name">英文名称：</div>
+                    <div class="n_neir">Estee Lauder Resilience Tri-Peptide Eye Creme</div>
+                    <div class="pro_name">商品编号：</div>
+                    <div class="n_neir">5811</div>
+                    <div class="pro_name">No5&nbsp;&nbsp;&nbsp;价：</div>
+                    <div class="n_neir">
+                        <span>￥368.00</span>
+                        <span class="prodTxt1">市场价： ￥560.00</span>
+                        <span id="rebate" class="prodTxt1">折扣： 6.6折</span>
+                    </div>
+                    <div id="sPriNM" class="pro_name" style="display: block; color: rgb(209, 16, 16);">特&nbsp;&nbsp;&nbsp;&nbsp;价：</div>
+                    <div id="sPriVL" class="n_neir" style="display: block; color: rgb(209, 16, 16); font-size: 16px; font-weight: bold; border: 0px solid rgb(102, 102, 102);">￥338.00&nbsp;<span style="font-size:12px;">(不返积分)</span></div>
+                    <div class="clear"></div>
+                </div>
+                <div class="cppro" style="padding-bottom:0px;">
+                    <div class="pro_name">所属品牌：</div>
+                    <div class="n_neir">
+                        <a href="http://www.no5.com.cn/brandstore-26.html">Estee Lauder 雅诗兰黛</a> → <a href="http://www.no5.com.cn/brandstore-1062.html">弹性紧实系列</a>
+                    </div>
+                    <div class="pro_name">所属分类：</div>
+                    <div class="n_neir">
+                        <a href="http://www.no5.com.cn/list-307-0-0-0-1.html">面部护理</a> → <a href="http://www.no5.com.cn/list-320-0-0-0-1.html">眼唇护理</a> → <a href="http://www.no5.com.cn/list-357-0-0-0-1.html">眼霜</a>
+                    </div>
+                    <div class="pro_name">用户评分：</div>
+                    <div class="n_neir">
+                        <div id="sp_xin_box">
+                            <div>
+                                <div class="sp_xin_line" style="width:98%;"></div>
+                            </div>
+                            <div class="star_rank"></div>
+                            
+                        </div>
+                        <div class="sp_user_count">
+                            <a href="#">已有<span class="magenta">37</span>条评论</a>
+                        </div>
+                    </div>
+                    <div class="pro_name">运费说明：</div>
+                    <div class="n_neir">
+                        <span class="prodRedTxt" style="margin-right:30px;">购物满80元免费快递</span>
+                        <a href="http://www.no5.com.cn/help/about_deliver.html#1" target="_blank">查看运费详情</a>
+                    </div>
+                    <div class="pro_name">消费保障：</div>
+                    <div class="n_neir">
+                        <span class="prodTxt2" style="margin-left:0px;"><img src="../img/ico01.jpg" width="18" height="15"></span>品质承诺
+                        <span class="prodTxt2"><img src="../img/ico02.jpg" width="23" height="15"></span>货到付款
+                        <span class="prodTxt2"><img src="../img/ico03.jpg" width="18" height="15"></span>不满意退货
+                        <span class="prodTxt2"><img src="../img/ico04.jpg" width="15" height="15"></span>可靠包装
+                    </div>
+                    <div class="pro_name">温馨提示：</div>
+                    <div class="n_neir" style="padding-bottom: 10px;">国家药监局提示您：请正确认识化妆品功效，化妆品不能替代药品，不能治疗皮肤病等疾病。</div>
+                    <div class="pro_name">服&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;务：</div>
+                    <div class="n_neir">本商品由&nbsp;<span style="color:#4063a7;">No5时尚广场</span>&nbsp;销售</div>
+                    <div class="clear"></div>
+                </div>
+                <div id="boxBuy">
+                    <span>我要买：
+                        <img src="../img/reduce.jpg" width="13" height="13" style="vertical-align: middle;">
+                        <input type="text" id="buyAnt" value="1" class="textinput" maxlength="3">
+                        <img src="../img/add.jpg" width="13" height="13" style="vertical-align: middle;">
+                    </span>
+                    <button id="btnBuy" type="button" class="prodBtn1 btnBuy"></button>
+                    <button type="button" id="btnFav" class="prodBtn1 btnFav">
+                        <input type="hidden">
+                    </button>
+                    <div class="clear"></div>
+                </div>
+                <span id="favSuc">收藏成功 
+                    <a href="#" target="_blank">[查看收藏夹]</a>
+                </span>
+                    
+                <div class="cuxiao">
+                    <p></p>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+
+        <div class="clrH2">&nbsp;</div>
+        <div class="part02">
+            <div class="p02_l">
+                <div id="box_bjtj" class="box_tj" style="margin-top:0px;">
+                    <div class="title_tj">编辑推荐</div>
+                    <div class="good_tj">
+                        <div class="imgbox">
+                            <a href="#" target="_blank">
+                                <img src="http://photo.no5.com.cn/product/sPhoto/prod_30073_S_140828152313_39635292.jpg" alt="Estee Lauder 雅诗兰黛鲜养焕亮凝霜(红石榴YR29,中样) 15ml" width="100" height="100">
+                            </a>
+                        </div>
+                        <div class="textbox">
+                            <p class="proname">
+                                <a href="#" target="_blank">Estee Lauder 雅诗兰黛鲜养焕亮凝霜(红石榴YR29,中样) 15ml</a>
+                            </p>
+                            <p>
+                                <strong class="prodRedTxt">￥98.00</strong>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="good_tj">
+                        <div class="imgbox">
+                            <a href="#" target="_blank">
+                                <img src="http://photo.no5.com.cn/product/sPhoto/prod_24833_S_140910135718_53049599.jpg" alt="Lancome 兰蔻新立体塑颜紧致眼部精华乳/眼霜(小样) 5ml" width="100" height="100">
+                            </a>
+                        </div>
+                        <div class="textbox">
+                            <p class="proname">
+                                <a href="#" target="_blank">Lancome 兰蔻新立体塑颜紧致眼部精华乳/眼霜(小样) 5ml</a>
+                            </p>
+                            <p>
+                                <strong class="prodRedTxt">￥48.00</strong>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="good_tj" style="border-bottom:none;">
+                        <div class="imgbox">
+                            <a href="#" target="_blank">
+                                <img src="http://photo.no5.com.cn/product/sPhoto/prod_29368_S_140414155501_97184425.jpg" alt="Clinique 倩碧匀净卓研淡斑精华露(中样) 15ml" width="100" height="100">
+                            </a>
+                        </div>
+                        <div class="textbox">
+                            <p class="proname">
+                                <a href="#" target="_blank">Clinique 倩碧匀净卓研淡斑精华露(中样) 15ml</a>
+                            </p>
+                            <p>
+                                <strong class="prodRedTxt">￥65.00</strong>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div id="box_goum" class="box_tj">
+                    <div class="title_tj">购买此商品的顾客还购买过</div>
+                    <div class="good_tj good_rx">
+                        <div class="tl_img">
+                            <a href="#" target="_blank">
+                                <img src="http://photo.no5.com.cn/product/sPhoto/prod_1750_S_180424142103_71671425.jpg" alt="Shiseido 资生堂盼丽风姿抗皱健肤水/爽肤水(10302) 150ml" width="72px" height="72px">
+                            </a>
+                        </div>
+                        <div class="textbox tl_text">
+                            <p class="rx_name">
+                                <a href="#" target="_blank">Shiseido 资生堂盼丽风姿抗皱健肤水/爽肤水(10302) 150ml</a>
+                            </p>
+                            <p class="rx_price">
+                                <strong class="prodRedTxt">￥335.00</strong>
+                            </p>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="good_tj good_rx">
+                        <div class="tl_img">
+                            <a href="#" target="_blank">
+                                <img src="http://photo.no5.com.cn/product/sPhoto/prod_24475_S_200304182049_12170845.jpg" alt="Lancome 兰蔻塑颜紧致焕白乳液（695169） 100ml" width="72px" height="72px">
+                            </a>
+                        </div>
+                        <div class="textbox tl_text">
+                            <p class="rx_name">
+                                <a href="#" target="_blank">Lancome 兰蔻塑颜紧致焕白乳液（695169） 100ml</a>
+                            </p>
+                            <p class="rx_price">
+                                <strong class="prodRedTxt">￥628.00</strong>
+                            </p>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="good_tj good_rx">
+                        <div class="tl_img">
+                            <a href="#" target="_blank">
+                                <img src="http://photo.no5.com.cn/product/sPhoto/prod_26924_S_190523104759_26490151.jpg" alt="Dior 迪奥凝脂恒久粉底液/锁妆粉底液哑光妆效 SPF35 PA+++ 2N号自然色（原020# 437813） 30ml" width="72px" height="72px">
+                            </a>
+                        </div>
+                        <div class="textbox tl_text">
+                            <p class="rx_name">
+                                <a href="#" target="_blank">Dior 迪奥凝脂恒久粉底液/锁妆粉底液哑光妆效 SPF35 PA+++ 2N号自然色（原020# 437813） 30ml</a>
+                            </p>
+                            <p class="rx_price">
+                                <strong class="prodRedTxt">￥368.00</strong>
+                            </p>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="good_tj good_rx" style="border-bottom:none;">
+                        <div class="tl_img">
+                            <a href="#" target="_blank">
+                                <img src="http://photo.no5.com.cn/product/sPhoto/prod_1704_S_191111130217_63693977.jpg" alt="Shiseido 资生堂盼丽风姿智感抚痕眼霜/抗皱小雷达 15ml" width="72px" height="72px">
+                            </a>
+                        </div>
+                        <div class="textbox tl_text">
+                            <p class="rx_name">
+                                <a href="#" target="_blank">Shiseido 资生堂盼丽风姿智感抚痕眼霜/抗皱小雷达 15ml</a>
+                            </p>
+                            <p class="rx_price">
+                                <strong class="prodRedTxt">￥368.00</strong>
+                            </p>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+                <div id="box_tprx" class="box_tj">
+                    <div class="title_tj">同品牌热销产品</div>
+                    <div class="good_tj good_rx">
+                        <div class="tl_img">
+                            <a href="#" target="_blank">
+                                <img src="http://photo.no5.com.cn/product/sPhoto/prod_22563_S_130925142836_25693642.jpg" alt="Estee Lauder 雅诗兰黛特润修护肌透精华露(第六代小棕瓶) 15ml" width="72" height="72">
+                            </a>
+                        </div>
+                        <div class="textbox tl_text">
+                            <p class="rx_name">
+                                <a href="#" target="_blank">Estee Lauder 雅诗兰黛特润修护肌透精华露(第六代小棕瓶) 15ml) 15ml</a>
+                            </p>
+                            <p class="rx_price">
+                                <strong class="prodRedTxt">￥115.00</strong>
+                            </p>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="good_tj good_rx">
+                        <div class="tl_img">
+                            <a href="#" target="_blank">
+                                <img src="http://photo.no5.com.cn/product/sPhoto/prod_16245_S_181123110507_38676735.jpg" alt="Estee Lauder 雅诗兰黛鲜活亮采红石榴倍润水（2018新红石榴爽肤水/能量水滋润型/高光水 381926） 200ml" width="72" height="72">
+                            </a>
+                        </div>
+                        <div class="textbox tl_text">
+                            <p class="rx_name">
+                                <a href="#" target="_blank">Estee Lauder 雅诗兰黛鲜活亮采红石榴倍润水（2018新红石榴爽肤水/能量水滋润型/高光水 381926） 200ml</a>
+                            </p>
+                            <p class="rx_price">
+                                <strong class="prodRedTxt">￥238.00</strong>
+                            </p>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="good_tj good_rx">
+                        <div class="tl_img">
+                            <a href="#" target="_blank">
+                                <img src="http://photo.no5.com.cn/product/sPhoto/prod_14216_S_181112154324_12983834.jpg" alt="Estee Lauder 雅诗兰黛鲜活亮采红石榴二合一洁面乳/洗面奶（2018新 381872） 125ml" width="72" height="72">
+                            </a>
+                        </div>
+                        <div class="textbox tl_text">
+                            <p class="rx_name">
+                                <a href="#" target="_blank">Estee Lauder 雅诗兰黛鲜活亮采红石榴二合一洁面乳/洗面奶（2018新 381872） 125ml</a>
+                            </p>
+                            <p class="rx_price">
+                                <strong class="prodRedTxt">￥168.00</strong>
+                            </p>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="good_tj good_rx">
+                        <div class="tl_img">
+                            <a href="#" target="_blank">
+                                <img src="http://photo.no5.com.cn/product/sPhoto/prod_18326_S_190117152738_91273780.jpg" alt="Estee Lauder 雅诗兰黛奇迹丰盈抗皱精华露(9XKL) 50ml" width="72" height="72">
+                            </a>
+                        </div>
+                        <div class="textbox tl_text">
+                            <p class="rx_name">
+                                <a href="#" target="_blank">Estee Lauder 雅诗兰黛奇迹丰盈抗皱精华露(9XKL) 50ml</a>
+                            </p>
+                            <p class="rx_price">
+                                <strong class="prodRedTxt">￥538.00</strong>
+                            </p>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="good_tj good_rx" style="border-bottom:none;">
+                        <div class="tl_img">
+                            <a href="#" target="_blank">
+                                <img src="http://photo.no5.com.cn/product/sPhoto/prod_24146_S_181207170456_52857338.jpg" alt="Estee Lauder 雅诗兰黛鲜活亮采红石榴面霜/日霜（2018新 381735） 50ml" width="72" height="72">
+                            </a>
+                        </div>
+                        <div class="textbox tl_text">
+                            <p class="rx_name">
+                                <a href="#" target="_blank">LA MER 海蓝之谜浓缩修护眼霜 15ml</a>
+                            </p>
+                            <p class="rx_price">
+                                <strong class="prodRedTxt">￥348.00</strong>
+                            </p>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+                <div id="box_zjll" class="box_tj">
+                    <div class="title_tj">最近浏览产品</div>
+                    <div class="clear"></div>
+                </div>
+                <div id="box_rdzx" class="box_tj">
+                    <div class="title_tj">热点资讯</div>
+                    <div class="zixun">
+                        <ul>
+                            <li>
+                                <span>
+                                    <a href="#" target="_blank" title="霉眼肿么破?5招轻松扫除眼部脂肪粒">·霉眼肿么破?5招轻松扫除眼部脂肪粒</a>
+                                </span>
+                            </li>
+                            <li>
+                                <span>
+                                    <a href="#" target="_blank" title="守住年龄的秘密!女人的眼睛会说谎">·守住年龄的秘密!女人的眼睛会说谎</a>
+                                </span>
+                            </li>
+                            <li>
+                                <span>
+                                    <a href="#" target="_blank" title="颜值高还需会保养 去细纹抗皱眼霜排行榜">·颜值高还需会保养 去细纹抗皱眼霜排行榜</a>
+                                </span>
+                            </li>
+                            <li>
+                                <span>
+                                    <a href="#" target="_blank" title="90后抗老 从这8个TIPS开始">·90后抗老 从这8个TIPS开始</a>
+                                </span>
+                            </li>
+                            <li>
+                                <span>
+                                    <a href="#" target="_blank" title="微笑天使惹人爱 教你踢走鱼尾纹">·微笑天使惹人爱 教你踢走鱼尾纹</a>
+                                </span>
+                            </li>
+                            <li>
+                                <span>
+                                    <a href="#" target="_blank" title="电眼闪闪惹人爱 眼部肌肤保养完全手册">·电眼闪闪惹人爱 眼部肌肤保养完全手册</a>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="sticPic1">
+                    <a href="#" target="_balnk">
+                        <img src="http://photo.no5.com.cn/static/82109720140926122227.jpg" width="200" height="291">
+                    </a>
+                </div>
+            </div>
+            <div class="p02_r">
+                <div id="tabBar" style="position: fixed; top: 0px;">
+                    <ul>
+                        <div class="addche">
+                            <button style="visibility: visible;"></button>
+                        </div>
+                        <li id="pTab_0" class="tabson">
+                            <a href="#" style="color:#ffffff;">商品详情</a>
+                        </li>
+                        <li id="pTab_1">
+                            <a href="#" style="color: rgb(0, 0, 0);">购买评论</a>
+                        </li>
+                        <li id="pTab_2">
+                            <a href="#" style="color: rgb(0, 0, 0);">商品咨询</a>
+                        </li>
+                        <li id="pTab_3">
+                            <a href="#" style="color: rgb(0, 0, 0);">购物须知</a>
+                        </li>
+                    </ul>
+                </div>
+                <div id="tabBarR" style="display: block;"></div>
+                <div id="con_two_1">
+                    <div id="tab_box_0">
+                        <div class="exp_img">
+                            <img src="../img/cpxq.jpg" width="750px">
+                        </div>
+                        <div class="exp_text">
+                            <h3>产品属性
+                                <span class="deTxt">PROPERTY</span>
+                            </h3>
+                            <div class="clrH10"></div>
+                            <p class="tzbox xiangxi">产地：
+                                <span>英国</span>&nbsp;
+                            </p>
+                            <p class="tzbox xiangxi">包装：
+                                <span>有外盒无密封</span>&nbsp;
+                            </p>
+                            <p class="tzbox xiangxi">规格：
+                                <span>正装</span>&nbsp;
+                            </p>
+                            <p class="tzbox xiangxi">功效：
+                                <span>去眼纹</span>&nbsp;
+                                <span>去眼袋</span>&nbsp;
+                            </p>
+                            <p class="tzbox xiangxi">肤质：
+                                <span>所有肤质</span>&nbsp;
+                            </p>
+                            <p class="tzbox xiangxi">肌龄：
+                                <span>成熟肌(35-44岁)</span>&nbsp;
+                                <span>衰退肌(45岁及以上)</span>&nbsp;
+                            </p>
+                            <div class="clrH10"></div>
+                            <h3 id="det0">产品概述
+                                <span class="deTxt">INFORMATION</span>
+                            </h3> 
+                            <div class="dItmBox">
+                                <div>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <p>
+                                                        <img src="../img/cpgs.jpg">
+                                                    </p>
+                                                </td>
+                                                <td>
+                                                    <p>
+                                                        <strong>Estee Lauder 雅诗兰黛弹力多肽眼霜(弹性紧实柔肤眼霜)</strong>
+                                                    </p>
+                                                    <p>丝滑一抹，促进胶原源源新 生，眼周仿佛重获胶原力量，更强韧、饱满、紧实，松弛的眼角得到轻盈提拉，干纹、细纹也一同舒展！双眸一改疲倦神态，变得立体有神！</p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <h3 id="det1">产品特点
+                                <span class="deTxt">FEATURES</span>
+                            </h3>
+                            <div class="dItmBox">
+                                <div align="center">
+                                    <p>
+                                        <img src="../img/cptd.jpg" width="750">
+                                    </p>
+                                </div>
+                            </div>
+                            <h3 id="det2">使用方法
+                                <span class="deTxt">USAGE</span>
+                            </h3>
+                            <div class="dItmBox">
+                                <div align="center">
+                                    <p>
+                                        <img src="../img/syff.jpg" width="750">
+                                    </p>
+                                </div>
+                            </div>
+                            <h3 id="det3">产品细节
+                                <span class="deTxt">DETAILS</span>
+                            </h3>
+                            <div class="dItmBox">
+                                <div>
+                                    <p>
+                                        <img src="../img/cpxj1.jpg" width="750">
+                                        <img src="../img/cpxj2.jpg" width="750">
+                                        <img src="../img/cpxj3.jpg" width="750">
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="exp_img">
+                            <img src="../img/ppgs.jpg" width="750">
+                        </div>
+                        <div class="clrH15"></div>
+                        <div class="goodtabs title_pl">配送包装</div>
+                        <div class="boxing">
+                            <div class="b_img">
+                                <img src="../img/psbz1.jpg" class="_loading" style="visibility: visible;">
+                            </div>
+                            <div class="b_text">商品包裹气泡膜，北京、上海以外地区的顾客，使用no5专属包装箱，内附购物凭证，纸箱内充分填充。</div>
+                        </div>
+                        <div class="boxing">
+                            <div class="b_img">
+                                <img src="../img/psbz2.jpg" class="_loading" style="visibility: visible;">
+                            </div>
+                            <div class="b_text">纸箱内充分填充,使用N°5专属胶带进行封箱包装，并粘贴“安全封条”。</div>
+                        </div>
+                        <div class="boxing">
+                            <div class="b_img">
+                                <img src="../img/psbz3.jpg" class="_loading" style="visibility: visible;">
+                            </div>
+                            <div class="b_text">
+                                <span class="prodRedTxt">如出现包装不一致，或封箱胶带、安全封条被撕毁，商品破损缺少等情况，</span>请当即与No5客服中心联系。
+                            </div>
+                        </div>
+                        <div class="clrH15"></div>
+                    </div>
+                    <div id="tab_box_1">
+                        <div class="goodtabs title_pl">
+                            <span class="more">
+                                <a href="#" target="_blank">查看更多>></a>
+                            </span>
+                            购买评论
+                        </div>
+                        <div class="eva">
+                            <div class="e_l">
+                                <p>皮肤瞬间柔滑，很好。应该是正品。</p>
+                                <p class="icon_xin5"></p>
+                            </div>
+                            <div class="e_r">
+                                <p>qqfanli_497571690498</p>
+                                <p class="shenfen">[黄金会员]</p>
+                                <p class="time">2020-07-07 06:11:24</p>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="eva">
+                            <div class="e_l">
+                                <p>发货很快，客服态度好，产品还没用，但应该是正品。</p>
+                                <p class="icon_xin5"></p>
+                            </div>
+                            <div class="e_r">
+                                <p>lili的丁丁当当</p>
+                                <p class="shenfen">[标准会员]</p>
+                                <p class="time">2020-07-07 11:29:49</p>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="eva">
+                            <div class="e_l">
+                                <p>对眼纹很有效果的，皮肤瞬间柔滑，很好。</p>
+                                <p class="icon_xin4"></p>
+                            </div>
+                            <div class="e_r">
+                                <p>明轩听雨</p>
+                                <p class="shenfen">[标准会员]</p>
+                                <p class="time">2020-07-07 14:57:34</p>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="eva">
+                            <div class="e_l">
+                                <p>这款眼霜质地看似很厚，很紧实，但是取一点在两个指尖稍微搓一搓，体温就可以把它融化，然后就变成软软的，涂的时候我会稍微按摩一下，不拉扯眼周，很快就吸收也不油，效果肯也较好，小小一瓶用了挺久的，性价比很高</p>
+                                <p class="icon_xin5"></p>
+                            </div>
+                            <div class="e_r">
+                                <p>款款baby</p>
+                                <p class="shenfen">[标准会员]</p>
+                                <p class="time">2020-07-07 14:43:51</p>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="eva">
+                            <div class="e_l">
+                                <p>这款眼霜是我使用最多一款，用了Ｎ瓶，效果真的不错，紧致，补水，去皱，会一直坚持的~~~~</p>
+                                <p class="icon_xin5"></p>
+                            </div>
+                            <div class="e_r">
+                                <p>与非经</p>
+                                <p class="shenfen">[标准会员]</p>
+                                <p class="time">2014-03-23 07:35:06</p>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="topj">
+                            <span class="err"></span>
+                            <button style="background: url(../img/btnGroup.gif) no-repeat 0px -162px; border-width: 0px; width: 75px; height: 29px; vertical-align: middle;">
+                            </button>
+                        </div>
+                        <div id="rvwbox">
+                            <h3>发表评论并打分：</h3>
+                            <div id="score">
+                                <span class="substar">&nbsp;</span>
+                                <span class="substar">&nbsp;</span>
+                                <span class="substar">&nbsp;</span>
+                                <span class="substar">&nbsp;</span>
+                                <span class="substar">&nbsp;</span>
+                                <span class="star_tips">(小提示:点击小星星就能评分了)</span>
+                                <div class="clear"></div>
+                            </div>
+                            <form name="frmRvw">
+                                <input type="hidden" name="act" value="saveProdRvw">
+                                <input type="hidden" name="ordrId">
+                                <input type="hidden" name="prodId" value="5811">
+                                <input type="hidden" name="score" value="5">
+                                <div class="textdiv">
+                                    <textarea name="rvwCnt" class="areatext"></textarea>
+                                    <span class="sub_top80">(5-200个字)</span>
+                                </div>
+                                <div class="textdiv">
+                                    <button id="btnSaveRvw" class="prodBtn2">
+                                        <input type="hidden">
+                                    </button>
+                                    <span></span>
+                                </div>
+                            </form>
+                            <div class="textdiv" style="padding-top:10px;">
+                                <p>说明：</p>
+                                <p>
+                                    1、欢迎您在此发表与心得体验、使用情况、商品质量相关的内容和评论，以帮助其他顾客了解商品；发表原创、实用、生动的商品评论，有机会在首页展示并获得额外的分享奖励！
+                                </p>
+                                <p>
+                                    2、商品评论采用先审核后发布原则，如果我们认为评论不能给其他顾客带来帮助，或违法国家有关规定，no5有权不发布这类评论。
+                                </p>
+                                <p>
+                                    3、只有购买过该商品的顾客，在购买后半年内可以进行商品评论，同一订单每款商品仅能评论一次。每条通过审核的评论均能获得一定分享奖励。
+                                </p>
+                            </div>
+                        </div>
+                        <div class="clrH15"></div>
+                    </div>
+                    <div id="tab_box_2">
+                        <div class="goodtabs title_pl">
+                            <span class="more">
+                                <a href="#" target="_blank">查看更多>></a>
+                            </span>
+                            商品咨询
+                        </div>
+                        <div class="group tips">
+                            <span class="prodRedTxt">温馨提示：</span>
+                            商品的包装、产地、批号、日期、库存情况等诸多信息，会因厂家更新商品及销售情况有变更。该回复仅在当时对提问者有效，其他顾客仅供参考。商品的包装、产地、批号、日期、库存情况等诸多信息，会因厂家更新商品及销售情况有变更。该回复仅在当时对提问者有效，其他顾客仅供参考。
+                        </div>
+                        <div class="qanda">
+                            <div class="tags">alipay262518725577 发表于2020-07-07 13:55:29</div>
+                            <div class="evazx">
+                                <p class="question">请问保质期到什么时候</p>
+                                <p class="xinde">客服回复：您好， 日期会根据销售及采购情况不断更新，无法为您准确核实，但我们售出的商品都为新鲜商品，如果您比较在意日期，订购时可以给客服留言中说明对日期的要求，我们会尽量按您的要求配送。感谢您对N°5的支持，祝您购物愉快！</p>
+                            </div>
+                        </div>
+                        <div class="qanda">
+                            <div class="tags">zse0098 发表于2020-07-07 16:51:36</div>
+                            <div class="evazx">
+                                <p class="question">你好。请问这款眼霜和兰蔻的Lancome新立体塑颜紧致眼霜(84617) 15ml那款去眼袋 皱纹效果要好些呢 买给妈妈的。谢谢。</p>
+                                <p class="xinde">客服回复：您好，这款两款功效：去眼纹 去眼袋的，适合肌龄：成熟肌(35-44岁) 衰退肌(45岁及以上) ，效果都是看肌肤对产品的吸收情况而定的。感谢您对N°5的支持，祝您购物愉快！</p>
+                            </div>
+                        </div>
+                        <div class="qanda">
+                            <div class="tags">jinlinger 发表于2020-07-07 10:22:42</div>
+                            <div class="evazx">
+                                <p class="question">50岁可以用这款眼霜吗？主要问题是眼部皱纹，干燥。</p>
+                                <p class="xinde">客服回复：您好，此款产品50岁可以使用，特别针对松弛、细纹、眼袋，并温和滋养眼周肌肤。感谢您对N°5的支持，祝您购物愉快！</p>
+                            </div>
+                        </div>
+                        <div class="qanda">
+                            <div class="tags">4926367**@qq.com 发表于2020-07-07 19:42:25</div>
+                            <div class="evazx">
+                                <p class="question">我今年25岁，眼部有些细纹和黑眼圈，请问哪款眼霜比较适合我啊？我是混合性皮肤</p>
+                                <p class="xinde">客服回复：您好，建议您选用 Estee Lauder雅诗兰黛青春抗皱滋润眼霜，对抗眼周初期老化，改善眼周干燥与细纹，淡化黑眼圈。感谢您对N°5的支持，祝您购物愉快！</p>
+                            </div>
+                        </div>
+                        <div class="qanda">
+                            <div class="tags">850307** 发表于2020-07-07 13:13:51</div>
+                            <div class="evazx">
+                                <p class="question">你好，请问你们卖的雅诗兰黛产品是哪里产地啊？</p>
+                                <p class="xinde">客服回复：您好，此款产品产地：美国或英国。国际品牌有很多原产国，每一批产品的产地会有所不同，或有些系列会专门授权给某个国家生产，是正常情况，可以确保为该品牌正品。我们保证N°5时尚广场售出的商品与您亲临商场选购的商品享有同样的品质保证。如果您对产地有要求，订购时可以给客服留言中说明对产地的要求，我们会尽量按您的要求配送。感谢您对N°5的支持，祝您购物愉快！</p>
+                            </div>
+                        </div>
+                        <div class="topj">
+                            <span class="err"></span>
+                            <button style="background: url(../img/btnGroup.gif) no-repeat 0px -191px; border-width: 0px; width: 75px; height: 29px; vertical-align: middle;float: right;margin-top: 8px;">
+                            </button>
+                        </div>
+                        <!-- <div id="quebox">
+                            <form name="frmQue">
+                                <input type="hidden" name="act" value="saveProdQue">
+                                <input type="hidden" name="prodId" value="5811">
+                                <div class="textdiv">
+                                    <h3>您的提问：</h3>
+                                    <textarea name="queCnt" class="areatext"></textarea>
+                                    <span class="sub_top80">(4-100个字)</span>
+                                </div>
+                                <div class="textdiv">
+                                    <button id="btnSaveQue" class="prodBtn3">
+                                        <input type="hidden">
+                                    </button>
+                                    <span></span>
+                                </div>
+                            </form>
+                        </div> -->
+                    </div>
+                </div>
+                <!-- <div id="tab_box_3" style="display:none;">
+                    <div class="goodtabs title_pl">购物须知</div>
+                    <div>
+                        <span class="loadtip">&nbsp;</span>
+                    </div>
+                </div> -->
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+
+
+
+
+    <div id="floatButtons" style="bottom: 94px; left: 1124.5px; visibility: visible;">
+        <div><img src="../img/top.jpg" width="25" height="89"></div>
+        <div><img src="../img/service.jpg" width="25" height="89"></div>
+    </div>
+
+
+
+    <!-- footer -->
+    <div class="footer">
+        <div class="f-cont">
+            <div class="f-info">
+                <div class="tel">
+                    <p class="num" style="font-size: 18px;">010-56422901</p>
+                    <p class="time">9:00-18:00</p>
+                </div>
+                <p class="weibo">新浪官方微博<a href="#" target="_blank"><img src="../img/guanzhu.jpg"></a></p>
+                <p class="ding"><input type="text" value="请输入您的Email地址" onfocus="clearval()" onblur="addval()"><a href="#"><img src="../img/ding.jpg"></a></p>
+                <p class="ps">最新美容资讯，新品及促销信息</p>
+            </div>
+            <dl class="howto">
+                <dt><a href="#" target="_blank">如何订购</a></dt>
+                <dd><a href="#" target="_blank">网上下单</a></dd>
+                <dd><a href="#" target="_blank">电话订购</a></dd>
+                <dd><a href="#" target="_blank">邮寄订购</a></dd>
+                <dd><a href="#" target="_blank">传真订购</a></dd>
+            </dl>
+            <dl class="howto">
+                <dt><a href="#" target="_blank">如何送货</a></dt>
+                <dd><a href="#" target="_blank">送货上门</a></dd>
+                <dd><a href="#" target="_blank">快递</a></dd>
+            </dl>
+            <dl class="howto">
+                <dt><a href="#" target="_blank">如何付款</a></dt>
+                <dd><a href="#" target="_blank">货到付款</a></dd>
+                <dd><a href="#" target="_blank">在线支付</a></dd>
+                <dd><a href="#" target="_blank">银行汇款</a></dd>
+            </dl>
+            <dl class="howto">
+                <dt><a href="#" target="_blank">订单查询</a></dt>
+                <dd><a href="#" target="_blank">订单状态</a></dd>
+                <dd><a href="#" target="_blank">查询订单</a></dd>
+                <dd><a href="#" target="_blank">无效订单</a></dd>
+                <dd><a href="#" target="_blank">支付失败</a></dd>
+                <dd><a href="#" target="_blank">缺货登记</a></dd>
+            </dl>
+            <dl class="howto">
+                <dt><a href="#" target="_blank">会员服务</a></dt>
+                <dd><a href="#" target="_blank">N°5购物保障</a></dd>
+                <dd><a href="#" target="_blank">N°5贴心服务</a></dd>
+            </dl>
+            <dl class="howto lastdl">
+                <dt><a href="#" target="_blank">联系我们</a></dt>
+                <dd><a href="#" target="_blank">关于N°5</a></dd>
+                <dd><a href="#" target="_blank">加入N°5</a></dd>
+                <dd><a href="#" target="_blank">团购加盟</a></dd>
+                <dd><a href="#">建议</a></dd>
+            </dl>
+            <div class="wei"><img src="../img/2wm.jpg"></div>
+        </div>
+    </div>
+    <div class="foot-bottom">
+        <dl class="fb">
+            <dt><img src="../img/f_04.jpg"></dt>
+            <dd>足不出户  享受网购乐趣</dd>
+            <dd>北京城区次日送达</dd>
+        </dl>
+        <dl class="fb">
+            <dt><img src="../img/f_05.jpg"></dt>
+            <dd>品质保证</dd>
+            <dd>15天不满意退换货</dd>
+        </dl>
+        <dl class="fb">
+            <dt><img src="../img/f_06.jpg"></dt>
+            <dd>价格实惠  购物有积分</dd>
+            <dd>积分抵现金</dd>
+        </dl>
+        <dl class="fb">
+            <dt><img src="../img/f_07.jpg"></dt>
+            <dd>1800多城市送货上门</dd>
+            <dd>货到付款</dd>
+        </dl>
+    </div>
+    <p class="beian">Copyright @ 2001-2020 N°5.com.cn All Rights Reserved 京ICP备11045170号&nbsp;|&nbsp;<a href="#" target="_blank">营业执照</a></p>
+    <script src="http://localhost/no5product/dist/js/details.min.js"></script>
+
+</body>
+</html>

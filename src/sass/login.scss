@@ -1,0 +1,181 @@
+@import 'public';
+
+
+#wrapper{
+    margin:0 auto;
+    width:980px;
+    height:auto;
+    .gray_border_box{
+        border:1px solid #C6E6F3;
+        margin-top:10px;
+        padding:10px;
+        text-align:left;
+        width: 958px;
+        float: left;
+        .log-reg-box {
+            height: 453px;
+            width: 455px;
+            float: left;
+            margin-top: 40px;
+            padding:0 10px;
+            .log-tit {
+                height: 43px;
+                width: 439px;
+                background-image: url(../img/reg-bg.png);
+                background-repeat: no-repeat;
+                background-position: -162px -153px;
+                margin-bottom: 37px;
+            }
+            #frmUserLogin{
+                margin: 0px;
+                .input{
+                    height: 55px;
+                    margin-left: 50px;
+					font-size: 12px;
+					a:link {
+						color: #00B6F2;
+						text-decoration: none;
+					}
+					a:visited {
+						color: #00B6F2;
+					}
+					a:hover {
+						color: #FF9900;
+						text-decoration: underline;
+					}
+					.width60{
+						width:60px;
+						height:25px;
+						line-height:23px;
+						text-align:right;
+						float:left;
+						span{
+							float:right;
+						}
+					}
+					.fixlogininput {
+						font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+						width: 200px;
+						padding:2px;
+						border: 1px solid #7f9db9;
+					}
+					.tip {
+						height: 25px;
+						font-size: 12px;
+						line-height: 25px;
+						padding-left: 65px;
+						*padding-left:0;
+						position: relative;
+						color: #ff0000;
+						font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+						white-space: normal;
+					}
+					.reg_errmsg{
+						color: #ff0000;;	
+					}
+					.width24{
+						width:24px;
+						height:23px;
+					}
+					#login-btn {
+						height: 29px;
+						width: 190px;
+						float: left;
+						margin-left: 132px;
+					}
+				}
+				#divVerifyCode{
+					display: none;
+					.testcode {
+						border: 1px solid #7f9db9;
+						padding:2px;
+						width: 50px;
+					}
+				}
+			}
+			.reg-tit {
+				height: 43px;
+				width: 439px;
+				background-image: url(../img/reg-bg.png);
+				background-repeat: no-repeat;
+				background-position: -163px -197px;
+				margin-left: 16px;
+				margin-bottom: 37px;
+			}
+			#frmUserRegister{
+				.input{
+                    height: 55px;
+                    margin-left: 50px;
+					font-size: 12px;
+					a:link {
+						color: #00B6F2;
+						text-decoration: none;
+					}
+					a:visited {
+						color: #00B6F2;
+					}
+					a:hover {
+						color: #FF9900;
+						text-decoration: underline;
+					}
+					.width60{
+						width:60px;
+						height:25px;
+						line-height:23px;
+						text-align:right;
+						float:left;
+						span{
+							float:right;
+						}
+					}
+					.fixlogininput {
+						font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+						width: 200px;
+						padding:2px;
+						border: 1px solid #7f9db9;
+					}
+					.img_right{
+						margin-left: 3px;
+						display: none;
+					}
+					.tip {
+						height: 25px;
+						font-size: 12px;
+						line-height: 25px;
+						padding-left: 65px;
+						*padding-left:0;
+						position: relative;
+						color: #515151;
+						font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+						white-space: normal;
+					}
+					#verifycode-box {
+						height: 20px;
+						width: 180px;
+						float: left;
+						.testcode {
+							border: 1px solid #7f9db9;
+							padding:2px;
+							width: 50px;
+						}
+					}
+				}
+				#reg-btn {
+					height: 29px;
+					width: 90px;
+					margin-left: 170px;
+					margin-bottom: 20px;
+				}
+			}
+		}
+		.ver-line {
+			background-image: url(../img/reg-bg.png);
+			background-repeat: no-repeat;
+			height: 403px;
+			width: 1px;
+			float: left;
+			background-position:-928px -83px;
+		}
+
+    }
+}
